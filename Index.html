@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="gu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEET PHYSICS GUJARATI</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Poppins and Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        /* Custom styles to apply the font family */
+        body {
+            font-family: 'Poppins', 'Inter', sans-serif;
+            background-color: #f0f4f8; /* A soft, clean background */
+        }
+        .font-poppins { font-family: 'Poppins', sans-serif; }
+        .font-inter { font-family: 'Inter', sans-serif; }
+        .gradient-bg {
+             background: linear-gradient(135deg, #e0f7fa 0%, #fffde7 100%); /* Soft sky blue to cream gradient */
+        }
+        /* Accordion styles */
+        .accordion-header {
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .accordion-header:hover {
+            background-color: #eef2f7;
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-out, padding 0.5s ease-out;
+        }
+        .accordion-content.open {
+            max-height: 2500px; /* Increased for larger tables */
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+        .accordion-icon {
+            transition: transform 0.3s ease;
+        }
+        .accordion-header.open .accordion-icon {
+            transform: rotate(180deg);
+        }
+        /* Custom table styles */
+        .custom-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .custom-table th, .custom-table td {
+            border: 2px solid #aab8c2; /* Thicker borders */
+            padding: 0.75rem;
+            text-align: center; /* Center alignment */
+        }
+        .custom-table th {
+            background-color: #1D3557;
+            color: white;
+            font-weight: bold;
+        }
+        .custom-table tbody tr:nth-child(even) {
+            background-color: #f3f4f6;
+        }
+        /* Custom list style - More robust implementation */
+        .custom-list li {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 8px;
+        }
+        .custom-list .list-icon {
+            color: #1D3557;
+            margin-right: 12px;
+            margin-top: 4px;
+        }
+    </style>
+</head>
+<body class="gradient-bg text-gray-800">
+
+    <!-- Header Section -->
+    <header style="background-color: #1D3557;" class="text-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <img src="https://raw.githubusercontent.com/syedirsad/CHAP1/main/logo.png" alt="NPG Logo" class="h-12 w-12" onerror="this.onerror=null;this.src='https://placehold.co/48x48/1D3557/FFFFFF?text=NPG';">
+                <div>
+                    <h1 class="text-xl md:text-2xl font-bold font-poppins" data-lang-key="brandName">NEET PHYSICS GUJARATI</h1>
+                    <p class="text-xs text-gray-300" data-lang-key="bySir">By Irshad Sir</p>
+                </div>
+            </div>
+            <div class="flex items-center">
+                <button id="lang-toggle" class="bg-white text-sm text-[#1D3557] font-bold py-2 px-4 rounded-full hover:bg-gray-200 transition duration-300">
+                    English
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-12">
+        
+        <!-- Exam Guide Section -->
+        <section id="exam-guide-section" class="bg-white rounded-xl shadow-lg p-6 md:p-8">
+            <div class="text-center mb-4">
+                 <p class="text-sm italic text-gray-500 mb-4" data-lang-key="specialThanks">Special Thanks to Ketan P Molia (Physics Teacher at R S M Poonawala Experimental School, Surat)</p>
+                <h2 class="text-3xl md:text-4xl font-bold text-[#1D3557] font-poppins mb-2" data-lang-key="guideTitle">Physics Board Exam 2026 - A Comprehensive Guide</h2>
+                <p class="text-md text-gray-600 font-inter" data-lang-key="guideSubtitle">Your complete resource for exam success.</p>
+            </div>
+            <div id="accordion-container" class="space-y-4">
+                <!-- Accordion items will be dynamically inserted here -->
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer style="background-color: #2C3E50;" class="text-white py-12">
+        <div class="container mx-auto px-6 text-center">
+            <h3 class="font-bold text-3xl mb-6" data-lang-key="connectWithUs">અમારી સાથે જોડાઓ</h3>
+            <div class="flex justify-center items-center space-x-8 mb-6">
+                <a href="https://chat.whatsapp.com/LGeExJ4a5562e13B04uuQm" target="_blank" class="hover:text-gray-300 transition-transform transform hover:scale-110"><i class="fab fa-whatsapp fa-3x"></i></a>
+                <a href="https://t.me/neet_physics_gujarati" target="_blank" class="hover:text-gray-300 transition-transform transform hover:scale-110"><i class="fab fa-telegram fa-3x"></i></a>
+                <a href="https://instagram.com/neet_physics.gujarati" target="_blank" class="hover:text-gray-300 transition-transform transform hover:scale-110"><i class="fab fa-instagram fa-3x"></i></a>
+            </div>
+            <p class="text-md font-inter">📞 : +91 96018 27762 | Telegram: @neet_physics_gujarati | Instagram: @neet_physics.gujarati</p>
+        </div>
+    </footer>
+
+    <script>
+        // --- LANGUAGE AND CONTENT DATA ---
+        const translations = {
+            en: {
+                brandName: "NEET PHYSICS GUJARATI",
+                bySir: "By Irshad Sir",
+                connectWithUs: "Connect With Us",
+                guideTitle: "Physics Board Exam 2026 - A Comprehensive Guide",
+                guideSubtitle: "Your complete resource for exam success.",
+                specialThanks: "Special Thanks to Ketan P Moliya (Physics Teacher at R S M Poonawala Experimental School, Surat)",
+                guideSections: [
+                    { 
+                        title: "Section 1: Understanding the Exam Pattern",
+                        icon: "fa-solid fa-file-alt",
+                        content: `
+                            <table class="custom-table">
+                                <thead><tr><th>Details of Section and Question</th><th>Question No.</th><th>Marks</th></tr></thead>
+                                <tbody>
+                                    <tr><td colspan="3" class="font-bold text-lg">PART - A</td></tr>
+                                    <tr><td><b>Multiple Choice Questions</b> (1 Mark each)</td><td><b>1 to 50</b></td><td><b>50</b></td></tr>
+                                    <tr><td colspan="3" class="font-bold text-lg">PART - B</td></tr>
+                                    <tr><td colspan="3" class="font-bold pl-8">SECTION - A</td></tr>
+                                    <tr><td><b>Short answer questions</b> (Answer any 8 out of 12) - 2 Marks each</td><td><b>1 to 12</b></td><td><b>16</b></td></tr>
+                                    <tr><td colspan="3" class="font-bold pl-8">SECTION - B</td></tr>
+                                    <tr><td><b>Short answer questions</b> (Answer any 6 out of 9) - 3 Marks each</td><td><b>13 to 21</b></td><td><b>18</b></td></tr>
+                                    <tr><td colspan="3" class="font-bold pl-8">SECTION - C</td></tr>
+                                    <tr><td><b>Detailed answer questions</b> (Answer any 4 out of 6) - 4 Marks each</td><td><b>22 to 27</b></td><td><b>16</b></td></tr>
+                                    <tr class="bg-gray-200"><td class="font-bold">Total Marks</td><td></td><td class="font-bold">100</td></tr>
+                                </tbody>
+                            </table>`
+                    },
+                    {
+                        title: "Section 2: Chapter-wise Blueprint (with Options)",
+                        icon: "fa-solid fa-map",
+                        content: `
+                            <p class="mb-4 text-sm text-gray-600">Note: The sum of marks in the blueprint (125) is higher than the total paper marks (100) because it includes all optional questions available to students.</p>
+                            <div class="overflow-x-auto">
+                            <table class="custom-table">
+                                <thead><tr><th>CH</th><th style="min-width: 200px;">Chapter Name</th><th>MCQ</th><th>2 MARK</th><th>3 MARK</th><th>4 MARK</th><th>TOTAL</th><th>PART B</th></tr></thead>
+                                <tbody>
+                                    <tr><td><b>1</b></td><td>Electric Charges and Fields</td><td><b>6</b></td><td><b>2</b></td><td>-</td><td><b>1</b></td><td><b>10</b></td><td><b>4</b></td></tr>
+                                    <tr><td><b>2</b></td><td>Electrostatic Potential & Capacitance</td><td><b>5</b></td><td>-</td><td><b>1</b></td><td><b>1</b></td><td><b>12</b></td><td><b>7</b></td></tr>
+                                    <tr><td><b>3</b></td><td>Current Electricity</td><td><b>3</b></td><td><b>1</b></td><td><b>1</b></td><td><b>1</b></td><td><b>12</b></td><td><b>9</b></td></tr>
+                                    <tr><td><b>4</b></td><td>Moving Charges and Magnetism</td><td><b>4</b></td><td>-</td><td><b>1</b></td><td>-</td><td><b>7</b></td><td><b>3</b></td></tr>
+                                    <tr><td><b>5</b></td><td>Magnetism and Matter</td><td><b>1</b></td><td><b>1</b></td><td>-</td><td>-</td><td><b>3</b></td><td><b>2</b></td></tr>
+                                    <tr><td><b>6</b></td><td>Electromagnetic Induction</td><td><b>4</b></td><td><b>1</b></td><td><b>1</b></td><td>-</td><td><b>9</b></td><td><b>5</b></td></tr>
+                                    <tr><td><b>7</b></td><td>Alternating Current</td><td><b>2</b></td><td><b>1</b></td><td><b>1</b></td><td><b>1</b></td><td><b>11</b></td><td><b>9</b></td></tr>
+                                    <tr><td><b>8</b></td><td>Electromagnetic Waves</td><td><b>2</b></td><td>-</td><td>-</td><td>-</td><td><b>2</b></td><td><b>0</b></td></tr>
+                                    <tr><td><b>9</b></td><td>Ray Optics and Optical Instruments</td><td><b>2</b></td><td><b>1</b></td><td><b>1</b></td><td>-</td><td><b>11</b></td><td><b>9</b></td></tr>
+                                    <tr><td><b>10</b></td><td>Wave Optics</td><td><b>2</b></td><td><b>1</b></td><td>-</td><td><b>1</b></td><td><b>7</b></td><td><b>5</b></td></tr>
+                                    <tr><td><b>11</b></td><td>Dual Nature of Radiation and Matter</td><td><b>5</b></td><td><b>1</b></td><td><b>1</b></td><td>-</td><td><b>10</b></td><td><b>5</b></td></tr>
+                                    <tr><td><b>12</b></td><td>Atoms</td><td><b>4</b></td><td><b>1</b></td><td><b>1</b></td><td>-</td><td><b>9</b></td><td><b>5</b></td></tr>
+                                    <tr><td><b>13</b></td><td>Nuclei</td><td><b>5</b></td><td>-</td><td>-</td><td><b>1</b></td><td><b>11</b></td><td><b>6</b></td></tr>
+                                    <tr><td><b>14</b></td><td>Semiconductor Electronics</td><td><b>5</b></td><td><b>1</b></td><td>-</td><td><b>1</b></td><td><b>11</b></td><td><b>6</b></td></tr>
+                                    <tr class="font-bold bg-gray-200"><td>Total</td><td>-</td><td><b>50</b></td><td><b>11</b></td><td><b>8</b></td><td><b>7</b></td><td><b>125</b></td><td><b>75</b></td></tr>
+                                </tbody>
+                            </table>
+                            </div>`
+                    },
+                    {
+                        title: "Section 3: A New Strategy to Secure 65+ Marks",
+                        icon: "fa-solid fa-bullseye",
+                        content: `
+                            <p class="mb-4 text-gray-700 text-left">This strategy focuses on chapters that are highly conceptual and generally easier to score in. By mastering the foundational chapters of electrostatics and current electricity (1-3) along with modern physics (12-14), you can build a strong base and comfortably pass the exam.</p>
+                            <div class="overflow-x-auto">
+                            <table class="custom-table">
+                                <thead><tr><th>CH</th><th style="min-width: 200px;">Chapter Name</th><th>MCQ</th><th>2 MARK</th><th>3 MARK</th><th>4 MARK</th><th>TOTAL</th><th>PART B</th></tr></thead>
+                                <tbody>
+                                    <tr><td><b>1</b></td><td>Electric Charges and Fields</td><td><b>6</b></td><td><b>2</b></td><td>-</td><td><b>1</b></td><td><b>10</b></td><td><b>4</b></td></tr>
+                                    <tr><td><b>2</b></td><td>Electrostatic Potential & Capacitance</td><td><b>5</b></td><td>-</td><td><b>1</b></td><td><b>1</b></td><td><b>12</b></td><td><b>7</b></td></tr>
+                                    <tr><td><b>3</b></td><td>Current Electricity</td><td><b>3</b></td><td><b>1</b></td><td><b>1</b></td><td><b>1</b></td><td><b>12</b></td><td><b>9</b></td></tr>
+                                    <tr><td><b>12</b></td><td>Atoms</td><td><b>4</b></td><td><b>1</b></td><td><b>1</b></td><td>-</td><td><b>9</b></td><td><b>5</b></td></tr>
+                                    <tr><td><b>13</b></td><td>Nuclei</td><td><b>5</b></td><td>-</td><td>-</td><td><b>1</b></td><td><b>11</b></td><td><b>6</b></td></tr>
+                                    <tr><td><b>14</b></td><td>Semiconductor Electronics</td><td><b>5</b></td><td><b>1</b></td><td>-</td><td><b>1</b></td><td><b>11</b></td><td><b>6</b></td></tr>
+                                    <tr class="font-bold bg-gray-200"><td>Total</td><td>-</td><td><b>28</b></td><td><b>5</b></td><td><b>3</b></td><td><b>5</b></td><td><b>65</b></td><td><b>37</b></td></tr>
+                                </tbody>
+                            </table>
+                            </div>
+                            <div class="mt-4 p-4 bg-blue-100 border-l-4 border-blue-500 text-blue-700 rounded-r-lg text-left">
+                                <p class="font-bold">STRATEGY TOTAL: 65 MARKS</p>
+                                <ul class="list-disc list-inside">
+                                    <li><b>PART A (MCQ):</b> 28 MARKS</li>
+                                    <li><b>PART B (Theory/Numericals):</b> 37 MARKS</li>
+                                </ul>
+                                <p class="mt-2">From the remaining chapters, focus your preparation only on MCQs and important numerical formulas.</p>
+                            </div>`
+                    },
+                    {
+                        title: "Section 4: Recommended Preparation Resources",
+                        icon: "fa-solid fa-book",
+                        content: `<div class="grid md:grid-cols-2 gap-6 text-left">
+                            <div class="p-6 bg-blue-50 rounded-xl border-2 border-blue-200">
+                                <div class="flex items-center mb-3">
+                                    <i class="fa-solid fa-list-check text-blue-500 text-2xl mr-3"></i>
+                                    <h4 class="font-bold text-lg text-[#1D3557]">For MCQs (Part A)</h4>
+                                </div>
+                                <ul class="custom-list text-gray-700">
+                                    <li><i class="fas fa-check list-icon"></i><span><b>Previous Year Board Papers (2020 - 2025)</b></span></li>
+                                    <li><i class="fas fa-check list-icon"></i><span>GUJCET Papers</span></li>
+                                    <li><i class="fas fa-check list-icon"></i><span>Board-released Unit Test Question Banks (1 to 5)</span></li>
+                                    <li><i class="fas fa-check list-icon"></i><span>Old Textbook MCQs</span></li>
+                                    <li><i class="fas fa-check list-icon"></i><span>Reputable Publication Books (e.g., Modern, Liberty)</span></li>
+                                    <li><i class="fas fa-check list-icon"></i><span>NCERT Exemplar Book MCQs</span></li>
+                                </ul>
+                            </div>
+                            <div class="p-6 bg-green-50 rounded-xl border-2 border-green-200">
+                                <div class="flex items-center mb-3">
+                                    <i class="fa-solid fa-pen-ruler text-green-500 text-2xl mr-3"></i>
+                                    <h4 class="font-bold text-lg text-[#1D3557]">For Descriptive Questions (Part B)</h4>
+                                </div>
+                                <ul class="custom-list text-gray-700">
+                                    <li><i class="fas fa-check list-icon"></i><span><b>Previous Year Board Papers (2020 - 2025)</b></span></li>
+                                    <li><i class="fas fa-check list-icon"></i><span>Board-released Unit Test Question Banks (1 to 5)</span></li>
+                                    <li><i class="fas fa-check list-icon"></i><span>Theory questions involving derivations</span></li>
+                                    <li><i class="fas fa-check list-icon"></i><span>Point-wise theory questions</span></li>
+                                    <li><i class="fas fa-check list-icon"></i><span>"Difference between" type questions</span></li>
+                                    <li><i class="fas fa-check list-icon"></i><span>All solved examples and exercises</span></li>
+                                </ul>
+                            </div>
+                        </div>`
+                    },
+                    {
+                        title: "Section 5: Exam Day Strategy & Best Practices",
+                        icon: "fa-solid fa-check-circle",
+                        content: `<div class="grid md:grid-cols-2 gap-6 text-left">
+                            <div class="p-6 bg-yellow-50 rounded-xl border-2 border-yellow-200">
+                                <div class="flex items-center mb-3">
+                                     <i class="fa-solid fa-lightbulb text-yellow-500 text-2xl mr-3"></i>
+                                    <h4 class="font-bold text-lg text-[#1D3557]">Tips for Part A (MCQs)</h4>
+                                </div>
+                                <ul class="custom-list text-gray-700">
+                                    <li><i class="fas fa-check list-icon"></i><span>Use your question paper for rough work.</span></li>
+                                    <li><i class="fas fa-check list-icon"></i><span>Do calculations systematically to avoid errors.</span></li>
+                                    <li><i class="fas fa-check list-icon"></i><span>Don't spend more than two minutes on a tough MCQ.</span></li>
+                                    <li><i class="fas fa-check list-icon"></i><span>Fill the OMR sheet page by page.</span></li>
+                                    <li><i class="fas fa-check list-icon"></i><span>Use a good quality black pen for the OMR.</span></li>
+                                </ul>
+                            </div>
+                            <div class="p-6 bg-red-50 rounded-xl border-2 border-red-200">
+                                <div class="flex items-center mb-3">
+                                    <i class="fa-solid fa-file-signature text-red-500 text-2xl mr-3"></i>
+                                    <h4 class="font-bold text-lg text-[#1D3557]">Tips for Part B (Written Answers)</h4>
+                                </div>
+                                <ul class="custom-list text-gray-700">
+                                    <li><i class="fas fa-check list-icon"></i><span><b>Start each new section on a new page.</b></span></li>
+                                    <li><i class="fas fa-check list-icon"></i><span>Write the section name clearly at the top.</span></li>
+                                    <li><i class="fas fa-check list-icon"></i><span>Draw diagrams neatly with a pencil.</span></li>
+                                    <li><i class="fas fa-check list-icon"></i><span><b>Box your final answer with correct units.</b></span></li>
+                                    <li><i class="fas fa-check list-icon"></i><span>Attempt in reverse order: <b>C -> B -> A</b>.</span></li>
+                                </ul>
+                            </div>
+                        </div>`
+                    }
+                ]
+            },
+            gu: {
+                brandName: "NEET PHYSICS GUJARATI",
+                bySir: "By Irshad Sir",
+                connectWithUs: "અમારી સાથે જોડાઓ",
+                guideTitle: "ભૌતિકશાસ્ત્ર બોર્ડ પરીક્ષા 2026 - એક વ્યાપક માર્ગદર્શિકા",
+                guideSubtitle: "પરીક્ષામાં સફળતા માટે તમારો સંપૂર્ણ સ્ત્રોત.",
+                specialThanks: "Special Thanks to Ketan P Moliya (Physics Teacher at R S M Poonawala Experimental School, Surat)",
+                guideSections: [
+                    { 
+                        title: "વિભાગ 1: પરીક્ષા પેટર્નની સમજ",
+                        icon: "fa-solid fa-file-alt",
+                        content: `
+                            <table class="custom-table">
+                                <thead><tr><th>વિભાગ તથા પ્રશ્નની વિગત</th><th>પ્રશ્ન ક્રમ</th><th>ગુણ</th></tr></thead>
+                                <tbody>
+                                    <tr><td colspan="3" class="font-bold text-lg">PART - A</td></tr>
+                                    <tr><td><b>બહુવિકલ્પ પ્રશ્નો</b> (દરેક 1 ગુણ)</td><td><b>1 થી 50</b></td><td><b>50</b></td></tr>
+                                    <tr><td colspan="3" class="font-bold text-lg">PART - B</td></tr>
+                                    <tr><td colspan="3" class="font-bold pl-8">SECTION - A</td></tr>
+                                    <tr><td><b>ટુંક જવાબી પ્રશ્નો</b> (12 માંથી કોઈ 8) - દરેક 2 ગુણ</td><td><b>1 થી 12</b></td><td><b>16</b></td></tr>
+                                    <tr><td colspan="3" class="font-bold pl-8">SECTION - B</td></tr>
+                                    <tr><td><b>ટુંક જવાબી પ્રશ્નો</b> (9 માંથી કોઈ 6) - દરેક 3 ગુણ</td><td><b>13 થી 21</b></td><td><b>18</b></td></tr>
+                                    <tr><td colspan="3" class="font-bold pl-8">SECTION - C</td></tr>
+                                    <tr><td><b>વિગતવાર જવાબ પ્રશ્નો</b> (6 માંથી કોઈ 4) - દરેક 4 ગુણ</td><td><b>22 થી 27</b></td><td><b>16</b></td></tr>
+                                    <tr class="bg-gray-200"><td class="font-bold">કુલ ગુણ</td><td></td><td class="font-bold">100</td></tr>
+                                </tbody>
+                            </table>`
+                    },
+                    {
+                        title: "વિભાગ 2: પ્રકરણ મુજબ બ્લુપ્રિન્ટ (વિકલ્પો સાથે)",
+                        icon: "fa-solid fa-map",
+                        content: `
+                            <p class="mb-4 text-sm text-gray-600">નોંધ: બ્લુપ્રિન્ટમાં ગુણનો સરવાળો (125) કુલ પેપરના ગુણ (100) કરતાં વધુ છે કારણ કે તેમાં વિદ્યાર્થીઓ માટે ઉપલબ્ધ તમામ વૈકલ્પિક પ્રશ્નોનો સમાવેશ થાય છે.</p>
+                            <div class="overflow-x-auto">
+                            <table class="custom-table">
+                                <thead><tr><th>CH</th><th style="min-width: 200px;">પ્રકરણનું નામ</th><th>MCQ</th><th>2 ગુણ</th><th>3 ગુણ</th><th>4 ગુણ</th><th>કુલ</th><th>PART B</th></tr></thead>
+                                <tbody>
+                                    <tr><td><b>1</b></td><td>વિદ્યુતભારો અને ક્ષેત્રો</td><td><b>6</b></td><td><b>2</b></td><td>-</td><td><b>1</b></td><td><b>10</b></td><td><b>4</b></td></tr>
+                                    <tr><td><b>2</b></td><td>સ્થિતવિદ્યુત સ્થિતિમાન અને કેપેસિટન્સ</td><td><b>5</b></td><td>-</td><td><b>1</b></td><td><b>1</b></td><td><b>12</b></td><td><b>7</b></td></tr>
+                                    <tr><td><b>3</b></td><td>પ્રવાહ વિદ્યુત</td><td><b>3</b></td><td><b>1</b></td><td><b>1</b></td><td><b>1</b></td><td><b>12</b></td><td><b>9</b></td></tr>
+                                    <tr><td><b>4</b></td><td>ગતિમાન વિદ્યુતભારો અને ચુંબકત્વ</td><td><b>4</b></td><td>-</td><td><b>1</b></td><td>-</td><td><b>7</b></td><td><b>3</b></td></tr>
+                                    <tr><td><b>5</b></td><td>ચુંબકત્વ અને દ્રવ્ય</td><td><b>1</b></td><td><b>1</b></td><td>-</td><td>-</td><td><b>3</b></td><td><b>2</b></td></tr>
+                                    <tr><td><b>6</b></td><td>વિદ્યુતચુંબકીય પ્રેરણ</td><td><b>4</b></td><td><b>1</b></td><td><b>1</b></td><td>-</td><td><b>9</b></td><td><b>5</b></td></tr>
+                                    <tr><td><b>7</b></td><td>પ્રત્યાવર્તી પ્રવાહ</td><td><b>2</b></td><td><b>1</b></td><td><b>1</b></td><td><b>1</b></td><td><b>11</b></td><td><b>9</b></td></tr>
+                                    <tr><td><b>8</b></td><td>વિદ્યુતચુંબકીય તરંગો</td><td><b>2</b></td><td>-</td><td>-</td><td>-</td><td><b>2</b></td><td><b>0</b></td></tr>
+                                    <tr><td><b>9</b></td><td>કિરણ પ્રકાશશાસ્ત્ર અને પ્રકાશીય ઉપકરણો</td><td><b>2</b></td><td><b>1</b></td><td><b>1</b></td><td>-</td><td><b>11</b></td><td><b>9</b></td></tr>
+                                    <tr><td><b>10</b></td><td>તરંગ પ્રકાશશાસ્ત્ર</td><td><b>2</b></td><td><b>1</b></td><td>-</td><td><b>1</b></td><td><b>7</b></td><td><b>5</b></td></tr>
+                                    <tr><td><b>11</b></td><td>વિકિરણ અને દ્રવ્યની દ્વૈત પ્રકૃતિ</td><td><b>5</b></td><td><b>1</b></td><td><b>1</b></td><td>-</td><td><b>10</b></td><td><b>5</b></td></tr>
+                                    <tr><td><b>12</b></td><td>પરમાણુઓ</td><td><b>4</b></td><td><b>1</b></td><td><b>1</b></td><td>-</td><td><b>9</b></td><td><b>5</b></td></tr>
+                                    <tr><td><b>13</b></td><td>ન્યુક્લિયસ</td><td><b>5</b></td><td>-</td><td>-</td><td><b>1</b></td><td><b>11</b></td><td><b>6</b></td></tr>
+                                    <tr><td><b>14</b></td><td>સેમિકન્ડક્ટર ઇલેક્ટ્રોનિક્સ</td><td><b>5</b></td><td><b>1</b></td><td>-</td><td><b>1</b></td><td><b>11</b></td><td><b>6</b></td></tr>
+                                    <tr class="font-bold bg-gray-200"><td>કુલ</td><td>-</td><td><b>50</b></td><td><b>11</b></td><td><b>8</b></td><td><b>7</b></td><td><b>125</b></td><td><b>75</b></td></tr>
+                                </tbody>
+                            </table>
+                            </div>`
+                    },
+                    {
+                        title: "વિભાગ 3: 65+ ગુણ મેળવવા માટે નવી વ્યૂહરચના",
+                        icon: "fa-solid fa-bullseye",
+                        content: `
+                            <p class="mb-4 text-gray-700 text-left">આ વ્યૂહરચના એવા પ્રકરણો પર કેન્દ્રિત છે જે અત્યંત વૈચારિક અને સામાન્ય રીતે ગુણ મેળવવા માટે સરળ હોય છે. ઇલેક્ટ્રોસ્ટેટિક્સ અને કરંટ ઇલેક્ટ્રિસિટી (1-3) ના પાયાના પ્રકરણો તેમજ આધુનિક ભૌતિકશાસ્ત્ર (12-14) માં નિપુણતા મેળવીને, તમે એક મજબૂત આધાર બનાવી શકો છો અને આરામથી પરીક્ષા પાસ કરી શકો છો.</p>
+                            <div class="overflow-x-auto">
+                            <table class="custom-table">
+                                <thead><tr><th>CH</th><th style="min-width: 200px;">પ્રકરણનું નામ</th><th>MCQ</th><th>2 ગુણ</th><th>3 ગુણ</th><th>4 ગુણ</th><th>કુલ</th><th>PART B</th></tr></thead>
+                                <tbody>
+                                    <tr><td><b>1</b></td><td>વિદ્યુતભારો અને ક્ષેત્રો</td><td><b>6</b></td><td><b>2</b></td><td>-</td><td><b>1</b></td><td><b>10</b></td><td><b>4</b></td></tr>
+                                    <tr><td><b>2</b></td><td>સ્થિતવિદ્યુત સ્થિતિમાન અને કેપેસિટન્સ</td><td><b>5</b></td><td>-</td><td><b>1</b></td><td><b>1</b></td><td><b>12</b></td><td><b>7</b></td></tr>
+                                    <tr><td><b>3</b></td><td>પ્રવાહ વિદ્યુત</td><td><b>3</b></td><td><b>1</b></td><td><b>1</b></td><td><b>1</b></td><td><b>12</b></td><td><b>9</b></td></tr>
+                                    <tr><td><b>12</b></td><td>પરમાણુઓ</td><td><b>4</b></td><td><b>1</b></td><td><b>1</b></td><td>-</td><td><b>9</b></td><td><b>5</b></td></tr>
+                                    <tr><td><b>13</b></td><td>ન્યુક્લિયસ</td><td><b>5</b></td><td>-</td><td>-</td><td><b>1</b></td><td><b>11</b></td><td><b>6</b></td></tr>
+                                    <tr><td><b>14</b></td><td>સેમિકન્ડક્ટર ઇલેક્ટ્રોનિક્સ</td><td><b>5</b></td><td><b>1</b></td><td>-</td><td><b>1</b></td><td><b>11</b></td><td><b>6</b></td></tr>
+                                    <tr class="font-bold bg-gray-200"><td>કુલ</td><td>-</td><td><b>28</b></td><td><b>5</b></td><td><b>3</b></td><td><b>5</b></td><td><b>65</b></td><td><b>37</b></td></tr>
+                                </tbody>
+                            </table>
+                            </div>
+                            <div class="mt-4 p-4 bg-blue-100 border-l-4 border-blue-500 text-blue-700 rounded-r-lg text-left">
+                                <p class="font-bold">વ્યૂહરચના કુલ: 65 ગુણ</p>
+                                <ul class="list-disc list-inside">
+                                    <li><b>PART A (MCQ):</b> 28 ગુણ</li>
+                                    <li><b>PART B (થિયરી/દાખલા):</b> 37 ગુણ</li>
+                                </ul>
+                                <p class="mt-2">બાકીના પ્રકરણોમાંથી, ફક્ત MCQs અને મહત્વપૂર્ણ દાખલાના સૂત્રો પર તમારી તૈયારી કેન્દ્રિત કરો.</p>
+                            </div>`
+                    },
+                    {
+                        title: "વિભાગ 4: ભલામણ કરેલ તૈયારી સંસાધનો",
+                        icon: "fa-solid fa-book",
+                        content: `<div class="grid md:grid-cols-2 gap-6 text-left">
+                            <div class="p-6 bg-blue-50 rounded-xl border-2 border-blue-200">
+                                <div class="flex items-center mb-3">
+                                    <i class="fa-solid fa-list-check text-blue-500 text-2xl mr-3"></i>
+                                    <h4 class="font-bold text-lg text-[#1D3557]">MCQs (Part A) માટે</h4>
+                                </div>
+                                <ul class="custom-list text-gray-700">
+                                    <li><i class="fas fa-check list-icon"></i><span><b>ગત વર્ષના બોર્ડ પેપર્સ (2020 - 2025)</b></span></li>
+                                    <li><i class="fas fa-check list-icon"></i><span>GUJCET પેપર્સ</span></li>
+                                    <li><i class="fas fa-check list-icon"></i><span>બોર્ડ દ્વારા પ્રકાશિત યુનિટ ટેસ્ટ પ્રશ્ન બેંક (1 થી 5)</span></li>
+                                    <li><i class="fas fa-check list-icon"></i><span>જૂના પાઠ્યપુસ્તકના MCQs</span></li>
+                                    <li><i class="fas fa-check list-icon"></i><span>પ્રતિષ્ઠિત પ્રકાશન પુસ્તકો (દા.ત., મોડર્ન, લિબર્ટી)</span></li>
+                                    <li><i class="fas fa-check list-icon"></i><span>NCERT એક્ઝેમ્પ્લર બુક MCQs</span></li>
+                                </ul>
+                            </div>
+                            <div class="p-6 bg-green-50 rounded-xl border-2 border-green-200">
+                                <div class="flex items-center mb-3">
+                                    <i class="fa-solid fa-pen-ruler text-green-500 text-2xl mr-3"></i>
+                                    <h4 class="font-bold text-lg text-[#1D3557]">વર્ણનાત્મક પ્રશ્નો (Part B) માટે</h4>
+                                </div>
+                                <ul class="custom-list text-gray-700">
+                                    <li><i class="fas fa-check list-icon"></i><span><b>ગત વર્ષના બોર્ડ પેપર્સ (2020 - 2025)</b></span></li>
+                                    <li><i class="fas fa-check list-icon"></i><span>બોર્ડ દ્વારા પ્રકાશિત યુનિટ ટેસ્ટ પ્રશ્ન બેંક (1 થી 5)</span></li>
+                                    <li><i class="fas fa-check list-icon"></i><span>સૂત્રોની તારવણી સંબંધિત થિયરી પ્રશ્નો</span></li>
+                                    <li><i class="fas fa-check list-icon"></i><span>મુદ્દાસર થિયરી પ્રશ્નો</span></li>
+                                    <li><i class="fas fa-check list-icon"></i><span>"તફાવત આપો" પ્રકારના પ્રશ્નો</span></li>
+                                    <li><i class="fas fa-check list-icon"></i><span>પાઠ્યપુસ્તકના તમામ ઉદાહરણો અને સ્વાધ્યાયના દાખલા</span></li>
+                                </ul>
+                            </div>
+                        </div>`
+                    },
+                    {
+                        title: "વિભાગ 5: પરીક્ષા દિવસની વ્યૂહરચના અને શ્રેષ્ઠ પ્રયાસો",
+                        icon: "fa-solid fa-check-circle",
+                        content: `<div class="grid md:grid-cols-2 gap-6 text-left">
+                            <div class="p-6 bg-yellow-50 rounded-xl border-2 border-yellow-200">
+                                <div class="flex items-center mb-3">
+                                    <i class="fa-solid fa-lightbulb text-yellow-500 text-2xl mr-3"></i>
+                                    <h4 class="font-bold text-lg text-[#1D3557]">Part A (MCQs) માટે ટિપ્સ</h4>
+                                </div>
+                                <ul class="custom-list text-gray-700">
+                                    <li><i class="fas fa-check list-icon"></i><span>કાચી ગણતરી માટે પ્રશ્નપત્રનો ઉપયોગ કરો.</span></li>
+                                    <li><i class="fas fa-check list-icon"></i><span>ભૂલો ટાળવા માટે ગણતરીઓ વ્યવસ્થિત રીતે કરો.</span></li>
+                                    <li><i class="fas fa-check list-icon"></i><span>અઘરા MCQ પર બે મિનિટથી વધુ સમય ન આપો.</span></li>
+                                    <li><i class="fas fa-check list-icon"></i><span>OMR શીટ પેજ પ્રમાણે ભરો.</span></li>
+                                    <li><i class="fas fa-check list-icon"></i><span>OMR માટે સારી ગુણવત્તાવાળી કાળી પેનનો ઉપયોગ કરો.</span></li>
+                                </ul>
+                            </div>
+                            <div class="p-6 bg-red-50 rounded-xl border-2 border-red-200">
+                                <div class="flex items-center mb-3">
+                                    <i class="fa-solid fa-file-signature text-red-500 text-2xl mr-3"></i>
+                                    <h4 class="font-bold text-lg text-[#1D3557]">Part B (લેખિત જવાબો) માટે ટિપ્સ</h4>
+                                </div>
+                                <ul class="custom-list text-gray-700">
+                                    <li><i class="fas fa-check list-icon"></i><span><b>દરેક નવો વિભાગ નવા પેજ પર શરૂ કરો.</b></span></li>
+                                    <li><i class="fas fa-check list-icon"></i><span>વિભાગનું નામ શીર્ષ પર સ્પષ્ટપણે લખો.</span></li>
+                                    <li><i class="fas fa-check list-icon"></i><span>આકૃતિઓ પેન્સિલથી સુઘડ રીતે દોરો.</span></li>
+                                    <li><i class="fas fa-check list-icon"></i><span><b>તમારા અંતિમ જવાબને સાચા એકમો સાથે બોક્સ કરો.</b></span></li>
+                                    <li><i class="fas fa-check list-icon"></i><span>ઊલટા ક્રમમાં પ્રયાસ કરો: <b>C -> B -> A</b>.</span></li>
+                                </ul>
+                            </div>
+                        </div>`
+                    }
+                ]
+            }
+        };
+
+        let currentLang = 'gu'; // Default language is Gujarati
+
+        const langToggleButton = document.getElementById('lang-toggle');
+        const accordionContainer = document.getElementById('accordion-container');
+
+        // --- FUNCTIONS ---
+        
+        function renderAccordion(lang) {
+            accordionContainer.innerHTML = '';
+            const sections = translations[lang].guideSections;
+            sections.forEach(section => {
+                const accordionItem = document.createElement('div');
+                accordionItem.className = 'border-2 border-gray-300 rounded-lg';
+                accordionItem.innerHTML = `
+                    <div class="accordion-header bg-white p-4 rounded-lg flex justify-between items-center">
+                        <div class="flex items-center space-x-4">
+                            <i class="${section.icon} text-[#1D3557] text-xl"></i>
+                            <h3 class="font-bold text-lg text-[#1D3557]">${section.title}</h3>
+                        </div>
+                        <i class="fas fa-chevron-down accordion-icon text-gray-500"></i>
+                    </div>
+                    <div class="accordion-content px-4">
+                        ${section.content}
+                    </div>
+                `;
+                accordionContainer.appendChild(accordionItem);
+            });
+        }
+
+        function changeLanguage(lang) {
+            document.documentElement.lang = lang;
+            const elements = document.querySelectorAll('[data-lang-key]');
+            elements.forEach(el => {
+                const key = el.getAttribute('data-lang-key');
+                if (translations[lang][key]) {
+                    el.textContent = translations[lang][key];
+                }
+            });
+            renderAccordion(lang);
+        }
+
+        // --- EVENT LISTENERS ---
+
+        langToggleButton.addEventListener('click', () => {
+            currentLang = currentLang === 'gu' ? 'en' : 'gu';
+            langToggleButton.textContent = currentLang === 'gu' ? 'English' : 'ગુજરાતી';
+            changeLanguage(currentLang);
+        });
+
+        accordionContainer.addEventListener('click', function(e) {
+            const header = e.target.closest('.accordion-header');
+            if (!header) return;
+
+            const content = header.nextElementSibling;
+            header.classList.toggle('open');
+            content.classList.toggle('open');
+        });
+
+        // --- INITIAL LOAD ---
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            changeLanguage(currentLang);
+        });
+
+    </script>
+
+</body>
+</html>
